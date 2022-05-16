@@ -1,38 +1,87 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "josefin sans", sans-serif;
+}
+
+.kalk {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  margin-top: 100px;
   text-align: center;
+  font-size: 56px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App {
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+span,
+h1 {
+  user-select: none;
+  cursor: default;
+}
+
+span {
+  font-size: 24px;
+}
+
+.container > input,
+.container > p {
+  overflow: visible;
+  height: 150px;
+  width: 1ch;
+  min-width: 1ch;
+  border: none;
+  border-bottom: 1px dotted grey;
+  background-color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+}
+
+.container > input:focus {
+  border-bottom: 1px solid black;
+}
+
+.container > p {
+  margin-top: -50px;
+  border: none;
+}
+
+.number:focus,
+.error:focus {
+  outline: none;
+}
+
+.error {
+  color: rgb(211, 24, 24);
+}
+
+.fd-column {
+  flex-direction: column;
+}
+
+.inactive {
+  opacity: 0.33;
 }
